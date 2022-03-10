@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form class="form" action="" method="POST">
+    {% csrf_token %}
+
+    <P>
+        YOU WANT TO DELETE {{ profile.name }}?
+
+    </P>   
+        
+    <input class="btn btn--sub btn--lg  my-md" type="submit" value="delete" />
+    <a  class="btn btn--sub btn--lg  my-md" href="{% url 'users:account' %}">GO BACK</a>
+</form>
+
+{% endblock %}
+
